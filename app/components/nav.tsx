@@ -85,11 +85,11 @@ export default function Nav() {
   return (
     <nav
       className={cx(
-        `fixed top-0 left-0 w-full bg-white p-4 z-50 transition-transform duration-1000 ease-in-outright-0 py-5 px-6 xl:p-3 xl:px-20 lgTablet:flex justify-between ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        }`,
+        `fixed top-0 left-0 w-full bg-white p-4 z-50 transition-transform duration-1000 ease-in-out py-5 px-6 xl:p-3 xl:px-20 lgTablet:flex justify-between`,
         {
-          "rounded-bl-3xl rounded-br-3xl p-6 px-6": expanded,
+          "translate-y-0": isVisible,
+          "-translate-y-full": !isVisible,
+          "rounded-bl-3xl rounded-br-3xl": expanded,
         }
       )}
     >
@@ -103,34 +103,61 @@ export default function Nav() {
             Krzysztof Poziomek
           </p>
         </div>
-        <div className="hamburger lgTablet:hidden ">
+        {deviceType === "mobile" && (
           <button
             type="button"
             onClick={() => setExpanded((prevState) => !prevState)}
+            aria-label={expanded ? "Close menu" : "Open menu"}
+            className="lgTablet:hidden"
           >
-            {!expanded ? (
-              <IconWrapper name="FiMenu" size={24} className="stroke-black" />
-            ) : (
-              <IconWrapper name="FiX" size={24} className="stroke-black" />
-            )}
+            <IconWrapper
+              name={expanded ? "FiX" : "FiMenu"}
+              size={24}
+              className="stroke-black"
+            />
           </button>
-        </div>
+        )}
       </div>
-      <ul
+      <div
         className={cx(
-          "text-center flex flex-col items-center lgTablet:flex-row lgTablet:gap-7",
+          "overflow-hidden transition-all !duration-500 ease-in-out",
           {
-            "visible flex": expanded,
-            hidden: !expanded && deviceType === "mobile",
+            "max-h-0 opacity-0 ": !expanded && deviceType === "mobile",
+            "max-h-screen opacity-100": expanded || deviceType === "desktop",
           }
         )}
       >
-        {navigationItems.map((item) => (
-          <li className="w-full pb-6 lgTablet:pb-0" key={item.id}>
-            {item.element}
-          </li>
-        ))}
-      </ul>
+        <ul
+          className={cx(
+            "text-center",
+            deviceType === "mobile"
+              ? "flex flex-col items-center"
+              : "flex flex-row items-center justify-end gap-7 mt-0"
+          )}
+        >
+          {navigationItems.map((item) => (
+            <li
+              key={item.id}
+              className={cx(
+                "w-full pb-6 lgTablet:pb-0 transition-all !duration-500 ease-in-out",
+                {
+                  "opacity-0 translate-y-2":
+                    !expanded && deviceType === "mobile",
+                  "opacity-100 translate-y-0":
+                    expanded || deviceType === "desktop",
+                }
+              )}
+              style={{
+                transitionDelay: `${
+                  expanded && deviceType === "mobile" ? item.id * 75 : 175
+                }ms`,
+              }}
+            >
+              {item.element}
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }
