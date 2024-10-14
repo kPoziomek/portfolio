@@ -31,7 +31,7 @@ export default function Nav() {
           handleClick={closeMenu}
         />
       ),
-      id: crypto.randomUUID(),
+      id: 1,
     },
     {
       element: (
@@ -42,11 +42,11 @@ export default function Nav() {
           handleClick={closeMenu}
         />
       ),
-      id: crypto.randomUUID(),
+      id: 2,
     },
     {
       element: <NavigationItem to="#skills" title="Skills" type={deviceType} />,
-      id: crypto.randomUUID(),
+      id: 3,
     },
     {
       element: (
@@ -56,19 +56,19 @@ export default function Nav() {
           type={deviceType}
         />
       ),
-      id: crypto.randomUUID(),
+      id: 4,
     },
     {
       element: (
         <NavigationItem to="#pricing" title="Pricing" type={deviceType} />
       ),
-      id: crypto.randomUUID(),
+      id: 5,
     },
     {
       element: (
         <NavigationItem to="#contacts" title="contacts" type={deviceType} />
       ),
-      id: crypto.randomUUID(),
+      id: 6,
     },
     {
       element: (
@@ -78,7 +78,7 @@ export default function Nav() {
           className="inline-block sm:w-3/4 md:w-2/3 lgTablet:w-full"
         />
       ),
-      id: crypto.randomUUID(),
+      id: 7,
     },
   ];
 
@@ -149,7 +149,7 @@ export default function Nav() {
               )}
               style={{
                 transitionDelay: `${
-                  expanded && deviceType === "mobile" ? item.id * 75 : 175
+                  expanded && deviceType === "mobile" ? item?.id * 75 : 175
                 }ms`,
               }}
             >

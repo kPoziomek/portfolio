@@ -27,7 +27,7 @@ export default {
     extend: {
       backgroundImage: {
         "custom-gradient": "linear-gradient(135deg, #F5F7FF, #A0C1FF)",
-        "card-gradient": "radial-gradient(175deg, #FCEBEF, #F4EDFF)",
+        "card-gradient": "radial-gradient(circle, #FCEBEF, #F4EDFF)",
         "testimonial-gradient": "linear-gradient(135deg, #EECDDC, #EDEDED)",
       },
       fontFamily: {

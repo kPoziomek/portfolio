@@ -30,12 +30,12 @@ export default function Welcome() {
         <div className="heroContent ">
           <div className="sectionTitle">
             <div className="text-center pb-10">
-              <p className="flex justify-center items-center gap-2.5">
-                Hi I&#39;m Poziom{" "}
-                <div>
+              <div className="flex justify-center items-center gap-2.5">
+                <p className="flex justify-center items-center gap-2.5">
+                  Hi I&#39;m Poziom{" "}
                   <PiHandEyeDuotone size={size} color={color} />
-                </div>
-              </p>
+                </p>
+              </div>
               <h1 className="text-h1-mobile md:text-h1-tablet lg:text-h1-desktop">
                 I&#39;m a WebDeveloper{" "}
               </h1>
