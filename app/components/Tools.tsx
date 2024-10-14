@@ -5,7 +5,7 @@ import CardContainer from "~/components/ui/CardContainer";
 
 export default function Tools() {
   return (
-    <CardLayout cardId="tools">
+    <CardLayout cardId="tools" fullHeight={false}>
       <CardHeader
         title="These are the tools I use"
         badgeIcon="FiTool"

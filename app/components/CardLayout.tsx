@@ -19,7 +19,7 @@ export default function CardLayout({
       id={cardId}
       className={cx(
         `
-        bg-card-gradient flex flex-col items-center shadow-2xl rounded-[40px] mt-10 ${className}
+        bg-card-gradient overflow-hidden flex flex-col items-center shadow-2xl rounded-[40px] mt-10 ${className}
       `,
         {
           "min-h-screen": fullHeight,

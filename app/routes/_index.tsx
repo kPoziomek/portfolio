@@ -4,6 +4,7 @@ import Welcome from "~/components/Welcome";
 import IconProvider from "~/components/context/iconContext";
 import Work from "~/components/Work";
 import Tools from "~/components/Tools";
+import Testimonials from "~/components/Testimonials";
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,6 +23,7 @@ export default function Index() {
             <Welcome />
             <Work />
             <Tools />
+            <Testimonials />
           </div>
         </main>
       </div>
