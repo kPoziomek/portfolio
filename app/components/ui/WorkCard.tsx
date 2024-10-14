@@ -1,13 +1,9 @@
-import type * as Icons from "react-icons/fi";
 import IconWrapper from "~/components/ui/IconWrapper";
 import CustomButton from "~/components/ui/CustomButton";
 import cx from "~/utils/cx";
+import { TWorkCard } from "~/components/types";
 
-type Props = {
-  bgColor: string;
-  companyName?: string;
-  companyLogo?: keyof typeof Icons;
-};
+type Props = TWorkCard;
 
 export default function WorkCard({
   bgColor,

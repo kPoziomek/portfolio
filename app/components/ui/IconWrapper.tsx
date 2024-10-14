@@ -1,18 +1,14 @@
 import * as Icons from "react-icons/fi";
+import { TIcon } from "~/components/types";
 
-type Props = {
-  name: keyof typeof Icons;
-  size?: number;
-  color?: string;
-  className?: string;
-};
+type Props = TIcon;
 
 export default function IconWrapper({
-                                      name,
-                                      size = 24,
-                                      color = "black",
-                                      className = "",
-                                    }: Props) {
+  name,
+  size = 24,
+  color = "black",
+  className = "",
+}: Props) {
   const IconComponent = Icons[name];
 
   if (!IconComponent) {

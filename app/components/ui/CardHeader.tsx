@@ -1,10 +1,6 @@
 import Badge from "~/components/ui/Badge";
-import * as Icons from "react-icons/fi";
-type Props = {
-  badgeText: string;
-  badgeIcon: keyof typeof Icons;
-  title: string;
-};
+import { TCardHeader } from "~/components/types";
+type Props = TCardHeader;
 
 export default function CardHeader({ badgeText, badgeIcon, title }: Props) {
   return (

@@ -1,10 +1,8 @@
 import IconWrapper from "~/components/ui/IconWrapper";
 import type * as Icons from "react-icons/fi";
+import { TBadge } from "~/components/types";
 
-type Props = {
-  text: string;
-  icon: keyof typeof Icons;
-};
+type Props = TBadge;
 
 export default function Badge({ text, icon }: Props) {
   return (

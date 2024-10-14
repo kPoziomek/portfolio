@@ -1,21 +1,15 @@
-import React from "react";
 import { Link } from "@remix-run/react";
+import { TCustomButton } from "~/components/types";
 
-type Props = {
-  to: string;
-  title: string;
-  type?: "primary" | "secondary" | "tertiary";
-  size?: "sm" | "md" | "lg";
-  className?: string;
-};
+type Props = TCustomButton;
 
 export default function CustomButton({
-                                       to,
-                                       title,
-                                       type = "primary",
-                                       size = "md",
-                                       className,
-                                     }: Props) {
+  to,
+  title,
+  type = "primary",
+  size = "md",
+  className,
+}: Props) {
   const buttonSize = {
     sm: "px-4 py-2",
     md: "px-6 py-3",

@@ -10,13 +10,13 @@ type Props = {
 };
 
 export default function NavigationItem({
-                                         to,
-                                         title,
-                                         type = "mobile",
-                                         size = "lg",
-                                         className,
-                                         handleClick,
-                                       }: Props) {
+  to,
+  title,
+  type = "mobile",
+  size = "lg",
+  className,
+  handleClick,
+}: Props) {
   const linkSize = {
     md: "mediumParagraph",
     lg: "largeParagraph",

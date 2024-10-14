@@ -1,12 +1,7 @@
-import { ReactNode } from "react";
 import cx from "~/utils/cx";
+import { TCardLayout } from "~/components/types";
 
-type Props = {
-  children: ReactNode;
-  cardId: string;
-  className?: string;
-  fullHeight?: boolean;
-};
+type Props = TCardLayout;
 
 export default function CardLayout({
   children,

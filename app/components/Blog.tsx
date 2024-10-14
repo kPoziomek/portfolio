@@ -5,9 +5,9 @@ import BlogCard from "~/components/ui/BlogCard";
 
 export default function Blog() {
   return (
-    <CardLayout cardId="contacts">
+    <CardLayout cardId="blog">
       <CardHeader
-        badgeText="contacts"
+        badgeText="Blog"
         badgeIcon="FiPenTool"
         title="I also write some stories about my projects"
       />
@@ -19,7 +19,7 @@ export default function Blog() {
           <BlogCard />
         </div>
         <div className="text-center pt-10">
-          <CustomButton to="/contacts" title="See all the contacts posts" />
+          <CustomButton to="/blog" title="See all the contacts posts" />
         </div>
       </div>
     </CardLayout>
