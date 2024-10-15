@@ -8,6 +8,27 @@
       "when": 1728916476512,
       "tag": "0000_open_kabuki",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1728981621199,
+      "tag": "0001_chief_bill_hollister",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1728981980584,
+      "tag": "0002_nervous_enchantress",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1728982924211,
+      "tag": "0003_green_peter_quill",
+      "breakpoints": true
     }
   ]
 }

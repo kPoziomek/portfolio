@@ -34,7 +34,7 @@ export default function Tools() {
             description="A web-based Git repository hosting service"
           />
           <ToolCard
-            tool="Vercel"
+            tool="Netlify"
             description="A cloud platform for static sites and Serverless Functions"
           />
         </>

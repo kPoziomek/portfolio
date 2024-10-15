@@ -1,13 +1,16 @@
 import { db } from "~/db.server";
 import { blogs } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
+import { Blogs, CreateBlogSchema, parseBlog } from "~/schemas/blogs";
 
-export async function getBlogs() {
-  return db.select().from(blogs).all();
+export async function getBlogs(): Promise<Blogs[]> {
+  const result = await db.select().from(blogs).all();
+  return result.map(parseBlog);
 }
 
-export async function getBlog(id: number) {
-  return db.select().from(blogs).where(eq(blogs.id, id)).get();
+export async function getBlog(id: number): Promise<Blogs | null> {
+  const result = db.select().from(blogs).where(eq(blogs.id, id)).get();
+  return result ? parseBlog(result) : null;
 }
 
 export async function createBlog({
@@ -16,8 +19,10 @@ export async function createBlog({
 }: {
   title: string;
   content: string;
-}) {
-  return db.insert(blogs).values({ title, content }).run();
+}): Promise<Blogs> {
+  const validatedData = CreateBlogSchema.parse({ title, content });
+  const result = db.insert(blogs).values(validatedData).returning().get();
+  return parseBlog(result);
 }
 
 export async function updateBlog(

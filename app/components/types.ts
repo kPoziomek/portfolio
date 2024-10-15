@@ -42,7 +42,6 @@ export type TIcon = {
 };
 
 export type TWorkCard = {
-  bgColor: string;
   companyName?: string;
   companyLogo?: keyof typeof Icons;
 };

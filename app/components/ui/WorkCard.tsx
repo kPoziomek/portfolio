@@ -6,18 +6,13 @@ import { TWorkCard } from "~/components/types";
 type Props = TWorkCard;
 
 export default function WorkCard({
-  bgColor,
   companyLogo = "FiWind",
   companyName,
 }: Props) {
   return (
     <div
       className={cx(
-        "flex  flex-col md:flex-row justify-between px-6 py-7 lg:px-10 lg:py-8 rounded-[40px] w-full shadow-xl",
-        {
-          "bg-indigo-100": bgColor === "indigo",
-          "bg-orange-100": bgColor === "orange",
-        }
+        "flex bg-customColor flex-col md:flex-row justify-between px-6 py-7 lg:px-10 lg:py-8 rounded-[40px] w-full shadow-xl"
       )}
     >
       <div className="flex flex-col gap-8 md:gap-36">
