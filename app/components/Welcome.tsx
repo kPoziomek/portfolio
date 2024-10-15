@@ -36,9 +36,9 @@ export default function Welcome() {
                   <PiHandEyeDuotone size={size} color={color} />
                 </p>
               </div>
-              <h1 className="text-h1-mobile md:text-h1-tablet lg:text-h1-desktop">
+              <h2 className="text-h1-mobile md:text-h1-tablet lg:text-h1-desktop">
                 I&#39;m a WebDeveloper{" "}
-              </h1>
+              </h2>
             </div>
             <div className="md:container sectionButtons flex flex-col md:flex-row justify-center items-center gap-2">
               <CustomButton

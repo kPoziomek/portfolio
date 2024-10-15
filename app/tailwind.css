@@ -4,10 +4,10 @@
 
 @layer base {
   h1 {
-    @apply text-h1-mobile lg:text-h1-desktop font-bold;
+    @apply text-h1-mobile lg:text-h1-desktop font-medium;
   }
   h2 {
-    @apply text-h2-mobile lg:text-h2-desktop font-semibold;
+    @apply text-h2-mobile lg:text-h2-desktop font-medium;
   }
   h3 {
     @apply text-h3-mobile lg:text-h3-desktop font-medium;

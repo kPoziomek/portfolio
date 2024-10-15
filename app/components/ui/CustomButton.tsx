@@ -25,7 +25,7 @@ export default function CustomButton({
   return (
     <Link
       to={to}
-      className={`scroll-smooth text-center font-bold ${buttonSize[size]} ${buttonType[type]} rounded-full w-full ${className}`}
+      className={`scroll-smooth text-center font-normal ${buttonSize[size]} ${buttonType[type]} rounded-full w-full ${className}`}
       rel="noreferrer"
     >
       {title}
