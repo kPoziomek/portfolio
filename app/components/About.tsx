@@ -9,14 +9,7 @@ export default function About() {
       className="items-center justify-center"
       fullHeight={false}
     >
-      <div
-        className={cx(
-          "flex flex-col md:flex-row justify-between px-6 py-7 lg:px-10 lg:py-8 rounded-[40px] w-full shadow-xl",
-          {
-            "bg-orange-100": true,
-          }
-        )}
-      >
+      <div className="flex flex-col md:flex-row justify-between px-6 py-7 lg:px-10 lg:py-8 rounded-[40px] w-full shadow-xl">
         <div className="flex flex-col justify-center gap-8 md:gap-36">
           <div className="block md:hidden w-full max-h-[550px] md:w-full px-4 pt-4 lg:w-1/2 lg:px-8 lg:pt-0 overflow-hidden">
             <img

@@ -3,7 +3,7 @@ import { useLoaderData } from "@remix-run/react";
 import { getBlog } from "~/models/blog.server";
 
 export const loader: LoaderFunction = async ({ params }) => {
-  const slug = params.slug as string;
+  const slug = parseInt(params?.slug as string);
   return json({ blog: await getBlog(slug) });
 };
 

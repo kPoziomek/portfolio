@@ -13,7 +13,7 @@ export default function SocialItem({
   return (
     <Link
       to={to}
-      className="group text-gray-700 px-1 py-0.5 bg-custom-base transition duration-300 ease-in-out hover:bg-custom-saturated-1 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-custom-saturated-2 focus:bg-custom-saturated-2 focus:text-gray-900 active:bg-custom-saturated-3 active:text-gray-900 rounded-2xl w-full"
+      className="group text-gray-700 px-1 py-0.5 bg-white transition duration-300 ease-in-out hover:bg-customHover hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-custom-saturated-2 focus:bg-ThirdBackgroundColor focus:text-gray-900 active:bg-ThirdBackgroundColor active:text-gray-900 rounded-2xl w-full"
     >
       <div
         className={`py-4 pl-5 pr-6 flex items-center rounded-2xl w-full gap-2.5 ${className}`}

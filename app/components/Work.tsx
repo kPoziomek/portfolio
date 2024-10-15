@@ -39,18 +39,18 @@ export default function Work() {
   return (
     <section
       id="work"
-      className={`min-h-screen bg-card-gradient flex items-center justify-center px-2 flex-col gap-10 relative z-10 rounded-[40px]  shadow-2xl  transition-all duration-1000 ease-in-out ${
-        isVisible ? "opacity-100 mt-[-60vh]" : "opacity-0"
+      className={`min-h-screen bg-new-gradient flex items-center justify-center px-2 flex-col gap-10 relative z-10 rounded-[40px] shadow-2xl transition-all duration-1000 ease-in-out ${
+        isVisible
+          ? "opacity-100 mt-[calc((-64px-220px-120px)*2)] sm:mt-[calc((-64px-230px-120px)*2)] lgTablet:mt-[calc((-88px-200px-120px)*2)] "
+          : "opacity-0"
       } delay-100`}
     >
-      {workItems.map((item, index) => {
-        const cardColor = index % 2 === 0 ? "indigo" : "orange";
+      {workItems.map((item) => {
         return (
           <WorkCard
             companyName={item.companyName}
             companyLogo={item.companyLogo}
             key={item.id}
-            bgColor={cardColor}
           />
         );
       })}

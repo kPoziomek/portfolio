@@ -1,4 +1,10 @@
-export default function BlogCard() {
+export default function BlogCard({
+  date,
+  title,
+}: {
+  date?: string;
+  title: string;
+}) {
   return (
     <div className="rounded-3xl shadow-md overflow-hidden">
       <div className="relative h-80 w-full">
@@ -11,11 +17,8 @@ export default function BlogCard() {
       </div>
 
       <div className="px-6 pb-6 pt-3 bg-white">
-        <p className="text-TextSecondary text-p-mobile">June 12, 2021</p>
-        <p className=" text-p-desktop">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          vehicula, libero nec ultricies ultricies
-        </p>
+        <p className="text-TextSecondary text-p-mobile">{date}</p>
+        <p className=" text-p-desktop">{title}</p>
       </div>
     </div>
   );

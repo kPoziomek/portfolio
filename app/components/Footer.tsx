@@ -65,7 +65,7 @@ export default function Footer() {
 
     {
       element: (
-        <NavigationItem to="#blog" title="Blog" type={"desktop"} size="md" />
+        <NavigationItem to="#blog" title="Blogs" type={"desktop"} size="md" />
       ),
       id: crypto.randomUUID(),
     },
@@ -125,7 +125,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white w-full px-4 py-20 rounded-tl-3xl rounded-tr-3xl">
+    <footer className="bg-SecondaryBackgroundColor w-full px-4 py-20 rounded-tl-3xl rounded-tr-3xl">
       <div className="flex flex-col md:flex-row md :gap-10 md:px-10">
         <div className="px-4 md:px-10 md:grow">
           <p className="largeParagraph pb-8">Follow me on other channels</p>
@@ -141,7 +141,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="border border-b-0 w-full md:h-fill md:w-0 border-BackgroundGradient-base " />
+        <div className="border border-b-0 w-full md:h-fill md:w-0 border-black " />
         <div className="px-4 flex flex-col gap-10 pt-10 md:flex-row md:pt-0 md:grow md:pl-10">
           <div className="flex flex-col gap-6 grow">
             <p className="largeParagraph"> Navigation</p>

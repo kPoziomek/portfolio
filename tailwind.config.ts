@@ -26,9 +26,10 @@ export default {
     },
     extend: {
       backgroundImage: {
-        "custom-gradient": "linear-gradient(135deg, #F5F7FF, #A0C1FF)",
+        "custom-gradient": "linear-gradient(180deg, #F5F7FF, #99A98F)",
         "card-gradient": "radial-gradient(circle, #FCEBEF, #F4EDFF)",
-        "testimonial-gradient": "linear-gradient(135deg, #EECDDC, #EDEDED)",
+        "testimonial-gradient": "linear-gradient(180deg, #fffdfd, #F6EACB)",
+        "new-gradient": "linear-gradient(180deg, #fffdfd,#D1E9F6)",
       },
       fontFamily: {
         sans: [
@@ -43,12 +44,17 @@ export default {
         ],
       },
       colors: {
+        PrimaryBackgroundColor: "#D1E9F6",
+        SecondaryBackgroundColor: "#FAF3E4",
+        ThirdBackgroundColor: "#FFF8DE",
         TextPrimary: "#0B0B0B",
         TextSecondary: "#505050",
         BackgroundGradient: "#F5F7FF",
         HighlightDark: "#140533",
-        HighlightLight1: "#F4EDFF",
-        HighlightLight2: "#FCEBEF",
+        HighlightLight1: "#EECAD5",
+        HighlightLight2: "#F6EACB",
+        customColor: "rgb(246, 234, 203,0.5)",
+        customHover: "#d6f2fb",
         custom: {
           base: "#F5F7FF",
           "lighter-1": "#F8FAFF",
